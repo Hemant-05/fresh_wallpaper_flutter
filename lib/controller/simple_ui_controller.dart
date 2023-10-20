@@ -18,6 +18,11 @@ class SimpleUIController extends GetxController{
 
   getPhotos() async { // here are some problem i need to find them
     var response = APIService().getMethod(url);
+    if(response.statusCode == 200){
+      var data = response.fromEach.data((elem){
+
+      });
+    }
   }
 
   @override
